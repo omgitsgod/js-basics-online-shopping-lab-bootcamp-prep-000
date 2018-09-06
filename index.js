@@ -71,5 +71,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
-  if (!car)
+  if (!cardNumber) {
+    return "Sorry, we don't have a credit card on file for you."
+  }
 }
