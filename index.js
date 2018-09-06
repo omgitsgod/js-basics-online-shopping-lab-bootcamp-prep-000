@@ -56,17 +56,16 @@ function total() {
 function removeFromCart(item) {
   // write your code here
     var found = cart.some(function (el) {
-    console.log(el.itemName === item);
+    console.log(el.itemName === name);
   });
-  if (found) {
   for (var i = 0; i < cart.length; i++) {
     if(cart[i]['itemName'] == item) {
       cart.splice(i, 1)
     } 
-  } else {
-    return "nope"
-  }
-  }
+   }
+   if (!found) {
+     return "nope"
+   }
 }
 
 function placeOrder(cardNumber) {
