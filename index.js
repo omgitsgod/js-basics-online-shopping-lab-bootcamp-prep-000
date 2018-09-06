@@ -55,12 +55,16 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  
+    var found = cart.some(function (el) {
+    console.log(el.itemName === item);
+  });
+  if (found) {
   for (var i = 0; i < cart.length; i++) {
     if(cart[i]['itemName'] == item) {
       cart.splice(i, 1)
     } 
-  
+  } else {
+    return "nope"
   }
   }
 }
